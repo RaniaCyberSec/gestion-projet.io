@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+   
+}
+
+.temphead {
+    margin: 20px auto;
+    max-width: 1150px;
+    box-shadow: 1px 1px 2px 4px rgb(0 0 0 / 21%);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 80px;
+   
+}
+
+.title,
+li {
+    font-weight: 400;
+    font-size: 24px;
+    color: rgb(196, 173, 48);
+    font-weight: bold;
+}
+
+.logo {
+    width: 86px;
+    height: 86px;
+    margin-right: 32px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    padding: 15px;
+    cursor: pointer;
+}
+li:hover {
+    color: rgb(129, 97, 6);
+}
+nav {
+    margin: 60px auto;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    opacity: 0;
+    width: 80%;
+    padding: 20px;
+    height: auto;
+    max-width: 1150px;
+    margin: 0 auto;
+    box-shadow: 0px 1px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "one one two two two"
+        "three three three four four";
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+
+.image-w {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.grid-container2,
+.grid-container3 {
+    opacity: 0;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px;
+    height: auto;
+    max-width: 1150px;
+    margin: 0 auto;
+    box-shadow: 0px 1px 2px 4px rgb(196, 173, 48, 0.25);
+    border-radius: 4px; 
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "one one one two two"
+        "three three four four four";
+}
+
+.grid-container3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "one one two two two"
+        "three three three four four";
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.gridpart {
+    position: relative;
+}
+
+.actual {
+    color:rgb(196, 173, 48);
+}
+
+@media screen and (max-width: 900px) {
+    .grid-container2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "one one two two"
+            "three three four four";
+    }
+
+    .grid-container3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "one one two two"
+            "three three four four";
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+            "one one two two"
+            "three three four four";
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .grid-container2,
+    .grid-container3,
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 18px;
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four";
+    }
+
+    nav {
+        margin: 20px auto;
+    }
+}
